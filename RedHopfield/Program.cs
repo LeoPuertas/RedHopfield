@@ -30,7 +30,7 @@ namespace RedHopfield
             Console.WriteLine("---------------------------------");
             Console.WriteLine("Ejecucion: ");
             Console.WriteLine("---------------------------------");
-            Patron patronPrueba = new Patron(1, 1, -1, -1);
+            Patron patronPrueba = new Patron(-1, -1, -1, -1);
             //Patron patronPrueba = new Patron(-1, -1, -1, -1);
             Console.WriteLine("Patron entrada: ");
             patronPrueba.Imprimir();

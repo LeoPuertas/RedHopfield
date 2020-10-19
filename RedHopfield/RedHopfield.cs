@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Serialization;
 
 namespace RedHopfield
 {
@@ -45,16 +46,29 @@ namespace RedHopfield
         }
         public Patron Funcionamiento(Patron patronPrueba)
         {
+            Console.WriteLine("---------------------------------");
+            Console.WriteLine("Inicio Ejecución");
+            Console.WriteLine("---------------------------------");
             int i = 0;
             while(i++ < 1000)
             {
-                var resultado = VectorPorMatriz(patronPrueba).FuncionActivacion();
+                var resultado = VectorPorMatriz(patronPrueba);
+
+                Console.WriteLine("Resultado producto con matriz W: ");
+                resultado.Imprimir();
+                Console.WriteLine("Resultado función activación: ");
+                resultado.FuncionActivacion();
+                resultado.Imprimir();
+
                 if(resultado.Comparar(patronPrueba))
                 {
+                    Console.WriteLine("Fin Ejecución");
+                    Console.WriteLine("---------------------------------");
                     return resultado;
                 }
                 patronPrueba = resultado;
             }
+            Console.WriteLine("Fin Ejecición: ");
             return null;
         }
         public Patron VectorPorMatriz(Patron patron)
