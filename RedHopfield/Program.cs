@@ -12,7 +12,7 @@ namespace RedHopfield
             Console.WriteLine("Entrenamiento: ");
             Console.WriteLine("---------------------------------");
 
-            List<Patron> patrones = new List<Patron>(); 
+            List<Patron> patrones = new List<Patron>();             
             patrones.Add(new Patron(1, 1, 1, -1));
             patrones.Add(new Patron(-1, -1, -1, 1));
 
@@ -30,7 +30,7 @@ namespace RedHopfield
             Console.WriteLine("---------------------------------");
             Console.WriteLine("Ejecucion: ");
             Console.WriteLine("---------------------------------");
-            Patron patronPrueba = new Patron(-1, -1, -1, -1);
+            Patron patronPrueba = ReconocimientoImages.ObtenerPatron(@"Images\PatronPrueba2.png");
             //Patron patronPrueba = new Patron(-1, -1, -1, -1);
             Console.WriteLine("Patron entrada: ");
             patronPrueba.Imprimir();
